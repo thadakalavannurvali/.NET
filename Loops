@@ -44,6 +44,27 @@ namespace vali_2
             }
             avrg = total / 10;
             Console.WriteLine("the sum of 10 numbers :{0} /n the avrg of 10 numbers:{1}",total,avrg);
+            int q, r, rows;
+            Console.WriteLine("the right angle triangle");
+            Console.WriteLine("Enter the no of rows required");
+            rows = Convert.ToInt32(Console.ReadLine());
+            for (q = 1; q <= rows; q++)
+            {
+                for (r = 1; r <= q; r++)
+                {
+                    Console.Write("*");
+                }
+                Console.Write("\n");
+            }
+            int ctr, p;
+            Console.WriteLine("the cube of the number");
+            Console.WriteLine("_______________________");
+            Console.WriteLine("enter the number:");
+            ctr = Convert.ToInt32(Console.ReadLine());
+            for (p = 1; p <= ctr; p++)
+            {
+                Console.WriteLine("the cube of the {0}:{1}", p, (p * p * p));
+            }
             
 
             
