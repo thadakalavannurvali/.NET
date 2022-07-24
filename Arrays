@@ -5,6 +5,41 @@ namespace vali_2
     {
         public static void Main(string[] args)
         {
+        int j,k,l;
+            Console.WriteLine("Copy elements from one array to another");
+            int[] m = new int[100];
+            int[] n = new int[100];
+            Console.WriteLine("Input the total no elements");
+            l = Convert.ToInt32(Console.ReadLine());
+            for (j = 0; j <= l; j++)
+            {
+                Console.WriteLine("Element - {0} :", j);
+                m[j] = Convert.ToInt32(Console.ReadLine());
+
+            }
+            Console.Write("the elements stored in first array are:{0} ", m[j]);
+            Console.WriteLine();
+            for (j = 0; j <= l; j++)
+            {
+                Console.Write("{0} ", m[j]);
+               
+
+            }
+            Console.WriteLine();
+
+            for (k = 0; k <= l; k++)
+            {
+                m[j] = n[k];
+            }
+            Console.Write("the elements stored in first array are:{0} ", n[j]);
+            Console.WriteLine();
+           for(k = 0; k <= l; k++)
+            {
+                Console.Write("{0} ", m[k]);
+
+
+            }
+            Console.WriteLine();
         int[] k = new int[100];
             Console.WriteLine("Read n'th number of values in an array and display it in reverse order");
             Console.WriteLine("______________________________________________________________________");
