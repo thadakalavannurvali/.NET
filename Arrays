@@ -1,0 +1,35 @@
+
+namespace vali_2
+{
+    internal class Class2
+    {
+        public static void Main(string[] args)
+        {
+            int l, m;
+            int[] k = new int[10];
+
+            for (l = 0; l < 10; l++)
+            {
+                k[l] = l + 100;
+            }
+            for (m = 0; m < 10; m++)
+            {
+                Console.WriteLine("element{0} :{1}", m, k[m]);
+            }
+
+            int[] k2 = new int[10];
+            for (int n = 0; n < 10; n++)
+            {
+                k2[n] = n + 100;
+            }
+            foreach (int o in k2)
+            {
+                int n = o - 100;
+                Console.WriteLine("element{0} :{1}", n, o);
+
+
+
+            }
+        }
+    }
+}
