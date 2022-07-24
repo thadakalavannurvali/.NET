@@ -5,6 +5,28 @@ namespace vali_2
     {
         public static void Main(string[] args)
         {
+        int[] k = new int[100];
+            Console.WriteLine("Read n'th number of values in an array and display it in reverse order");
+            Console.WriteLine("______________________________________________________________________");
+            Console.WriteLine("Enter the number of to stoe in array:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int i, j;
+            for( i = 0; i <=n; i++)
+            {
+                Console.Write("Element - {0}: ", i);
+
+                k[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine("the values store in array are:");
+            for (i = 0; i <= n; i++) {
+                Console.Write("{0}", k[i]);
+            }
+            
+            Console.WriteLine("the values store into the array in reverse order are:");
+            for (j = i - 1; j <= n; j--)
+            {
+                Console.Write(" {0}", k[j]);
+            }
             int l, m;
             int[] k = new int[10];
 
