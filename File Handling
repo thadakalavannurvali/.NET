@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace File_operations
+{
+    internal class Fileoptions
+    {
+        public static void Main()
+        {
+        Console.WriteLine();
+            FileInfo file1 = new FileInfo("D:\\Dotnet\\foln.txt");
+            FileAttributes ftr= file1.Attributes;\\ file attributes
+            Console.WriteLine("the attributes of file" + ftr);
+             string foln;
+            Console.WriteLine("Enter the file name to create :");
+            foln = Console.ReadLine();
+            Directory.CreateDirectory("D:\\Dotnet\\"+foln);
+            Console.WriteLine("new file is created");
+            string strfile = "D:\\Dotnet\\foln.txt";
+            string strval;
+            Console.WriteLine("please enter the text line");
+            strval = Console.ReadLine();
+            using (FileStream fs = File.Create(strfile)) \\ adding text to existing file
+            {
+                Byte[] info1 = new UTF8Encoding(true).GetBytes(strval);
+                fs.Write(info1, 0, info1.Length);
+            }
+            using (StreamReader sr1 = File.OpenText(strfile)) \\redang a file
+            {
+                string vars = "";
+                while ((vars = sr1.ReadLine()) != null)
+                {
+                    Console.WriteLine(vars);
+                }
+
+            }
+        }
+    }
+}
